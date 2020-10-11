@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+
+class PhotoTab extends StatefulWidget {
+  PhotoTab({Key key}) : super(key: key);
+
+  @override
+  _PhotoTabState createState() => _PhotoTabState();
+}
+
+class _PhotoTabState extends State<PhotoTab> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[900],
+    );
+  }
+}
