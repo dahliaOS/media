@@ -43,9 +43,13 @@ class _HomeState extends State<Home> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-          appBar: ColoredTabBar(
+          bottomNavigationBar: ColoredTabBar(
             Colors.grey[900],
             TabBar(
+              indicator: BoxDecoration(
+                color: Theme.of(context).accentColor,
+                borderRadius: BorderRadius.circular(10),
+              ),
               physics: BouncingScrollPhysics(),
               controller: DefaultTabController.of(context),
               tabs: [
