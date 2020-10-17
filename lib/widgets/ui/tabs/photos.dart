@@ -1,3 +1,4 @@
+import 'package:Media/widgets/gridtile.dart';
 import 'package:flutter/material.dart';
 
 class PhotoTab extends StatefulWidget {
@@ -12,6 +13,14 @@ class _PhotoTabState extends State<PhotoTab> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[900],
+      body: GridView.builder(
+        itemCount: 100,
+        gridDelegate:
+            SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 100),
+        itemBuilder: (context, index) {
+          return MediaGridTile();
+        },
+      ),
     );
   }
 }
