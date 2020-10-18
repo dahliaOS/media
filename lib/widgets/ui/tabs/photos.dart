@@ -18,7 +18,9 @@ class _PhotoTabState extends State<PhotoTab> {
         gridDelegate:
             SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 100),
         itemBuilder: (context, index) {
-          return MediaGridTile();
+          return MediaGridTile(
+            index: index,
+          );
         },
       ),
     );

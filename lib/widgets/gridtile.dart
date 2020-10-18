@@ -1,23 +1,94 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class MediaGridTile extends StatefulWidget {
+  final int index;
+
+  const MediaGridTile({Key key, @required this.index}) : super(key: key);
   @override
   _MediaGridTileState createState() => _MediaGridTileState();
 }
+
+List<int> _selectedList = List<int>();
 
 class _MediaGridTileState extends State<MediaGridTile> {
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        SizedBox(
-          width: 500,
-          height: 150,
-          child: Image.asset(
-            "assets/examples/logo.png",
-            fit: BoxFit.cover,
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: MouseRegion(
+            cursor: SystemMouseCursors.click,
+            child: GestureDetector(
+              onTap: () {
+                setState(() {
+                  if (!_selectedList.contains(widget.index)) {
+                    setState(() {
+                      _selectedList.add(widget.index);
+                    });
+                    Scaffold.of(context).hideCurrentSnackBar();
+                    Scaffold.of(context).showSnackBar(SnackBar(
+                      margin: EdgeInsets.all(10),
+                      behavior: SnackBarBehavior.floating,
+                      action: SnackBarAction(
+                        label: "Unselect All",
+                        onPressed: () {
+                          Scaffold.of(context).hideCurrentSnackBar();
+                          setState(() {
+                            _selectedList.clear();
+                          });
+                        },
+                      ),
+                      content:
+                          Text("Selected: " + _selectedList.length.toString()),
+                      duration: Duration(days: 1),
+                    ));
+                    print(_selectedList.length);
+                  } else {
+                    _selectedList.remove(widget.index);
+                    Scaffold.of(context).hideCurrentSnackBar();
+                    if (_selectedList.length != 0) {
+                      Scaffold.of(context).showSnackBar(SnackBar(
+                        action: SnackBarAction(
+                          label: "Unselect All",
+                          onPressed: () {
+                            Scaffold.of(context).hideCurrentSnackBar();
+                            setState(() {
+                              _selectedList.clear();
+                            });
+                          },
+                        ),
+                        content: Text(
+                            "Selected: " + _selectedList.length.toString()),
+                        duration: Duration(days: 1),
+                      ));
+                    }
+                  }
+                });
+              },
+              child: SizedBox(
+                width: 500,
+                height: 150,
+                child: Image.asset(
+                  "assets/examples/logo.png",
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
           ),
-        )
+        ),
+        _selectedList.contains(widget.index)
+            ? Container(
+                width: 30,
+                height: 30,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.blue,
+                ),
+                child: Icon(Icons.check),
+              )
+            : SizedBox.shrink()
       ],
     );
   }
