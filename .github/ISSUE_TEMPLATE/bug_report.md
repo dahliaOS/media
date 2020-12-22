@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve the desktop
+about: Create a report to help us improve the Media application
 title: ''
 labels: ''
 assignees: ''
