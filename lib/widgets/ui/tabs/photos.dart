@@ -2,7 +2,7 @@ import 'package:Media/widgets/gridtile.dart';
 import 'package:flutter/material.dart';
 
 class PhotoTab extends StatefulWidget {
-  PhotoTab({Key key}) : super(key: key);
+  PhotoTab({Key? key}) : super(key: key);
 
   @override
   _PhotoTabState createState() => _PhotoTabState();

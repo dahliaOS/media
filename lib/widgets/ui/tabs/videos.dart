@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class VideoTab extends StatefulWidget {
-  VideoTab({Key key}) : super(key: key);
+  VideoTab({Key? key}) : super(key: key);
 
   @override
   _VideoTabState createState() => _VideoTabState();

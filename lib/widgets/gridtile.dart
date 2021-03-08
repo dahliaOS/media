@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class MediaGridTile extends StatefulWidget {
-  final int index;
+  final int? index;
 
-  const MediaGridTile({Key key, @required this.index}) : super(key: key);
+  const MediaGridTile({Key? key, @required this.index}) : super(key: key);
   @override
   _MediaGridTileState createState() => _MediaGridTileState();
 }
 
-List<int> _selectedList = List<int>();
+List<int> _selectedList = List<int>.empty(growable: true);
 
 class _MediaGridTileState extends State<MediaGridTile> {
   @override
@@ -25,7 +25,7 @@ class _MediaGridTileState extends State<MediaGridTile> {
                 setState(() {
                   if (!_selectedList.contains(widget.index)) {
                     setState(() {
-                      _selectedList.add(widget.index);
+                      _selectedList.add(widget.index!);
                     });
                     Scaffold.of(context).hideCurrentSnackBar();
                     Scaffold.of(context).showSnackBar(SnackBar(

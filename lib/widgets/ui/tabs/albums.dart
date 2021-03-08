@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AlbumTab extends StatefulWidget {
-  AlbumTab({Key key}) : super(key: key);
+  AlbumTab({Key? key}) : super(key: key);
 
   @override
   _AlbumTabState createState() => _AlbumTabState();
