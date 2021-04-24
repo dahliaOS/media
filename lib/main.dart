@@ -1,8 +1,8 @@
-import 'package:Media/widgets/coloredtabbar.dart';
-import 'package:Media/widgets/ui/tabs/albums.dart';
-import 'package:Media/widgets/ui/tabs/photos.dart';
-import 'package:Media/widgets/ui/tabs/videos.dart';
-import 'package:Media/widgets/ui/viewer.dart';
+import 'package:media/widgets/coloredtabbar.dart';
+import 'package:media/widgets/ui/tabs/albums.dart';
+import 'package:media/widgets/ui/tabs/photos.dart';
+import 'package:media/widgets/ui/tabs/videos.dart';
+import 'package:media/widgets/ui/viewer.dart';
 import 'package:flutter/material.dart';
 
 void main() {

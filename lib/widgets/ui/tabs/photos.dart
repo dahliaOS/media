@@ -1,4 +1,4 @@
-import 'package:Media/widgets/gridtile.dart';
+import 'package:media/widgets/gridtile.dart';
 import 'package:flutter/material.dart';
 
 class PhotoTab extends StatefulWidget {
