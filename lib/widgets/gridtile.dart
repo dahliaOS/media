@@ -72,6 +72,7 @@ class _MediaGridTileState extends State<MediaGridTile> {
                 height: 150,
                 child: Image.asset(
                   "assets/examples/logo.png",
+                  package: "media",
                   fit: BoxFit.cover,
                 ),
               ),
