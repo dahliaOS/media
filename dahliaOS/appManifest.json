@@ -1,0 +1,10 @@
+{
+      "id": "io.dahliaos.media",
+      "altName": "media",
+      "realName": "Media",
+      "version": "dahliaOS-latest",
+      "description": "Preview files and folders on dahliaOS",
+      "sourceCode": "https://github.com/dahliaOS/media",
+      "hash": "DAP_AUTOMATION_PKGHASH",
+      "architecture": "x86_64"
+},
