@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class MediaGridTile extends StatefulWidget {
   final int? index;
@@ -27,14 +26,14 @@ class _MediaGridTileState extends State<MediaGridTile> {
                     setState(() {
                       _selectedList.add(widget.index!);
                     });
-                    Scaffold.of(context).hideCurrentSnackBar();
-                    Scaffold.of(context).showSnackBar(SnackBar(
+                    ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                       margin: EdgeInsets.all(10),
                       behavior: SnackBarBehavior.floating,
                       action: SnackBarAction(
                         label: "Unselect All",
                         onPressed: () {
-                          Scaffold.of(context).hideCurrentSnackBar();
+                          ScaffoldMessenger.of(context).hideCurrentSnackBar();
                           setState(() {
                             _selectedList.clear();
                           });
@@ -47,13 +46,13 @@ class _MediaGridTileState extends State<MediaGridTile> {
                     print(_selectedList.length);
                   } else {
                     _selectedList.remove(widget.index);
-                    Scaffold.of(context).hideCurrentSnackBar();
+                    ScaffoldMessenger.of(context).hideCurrentSnackBar();
                     if (_selectedList.length != 0) {
-                      Scaffold.of(context).showSnackBar(SnackBar(
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         action: SnackBarAction(
                           label: "Unselect All",
                           onPressed: () {
-                            Scaffold.of(context).hideCurrentSnackBar();
+                            ScaffoldMessenger.of(context).hideCurrentSnackBar();
                             setState(() {
                               _selectedList.clear();
                             });
