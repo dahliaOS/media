@@ -1,24 +1,14 @@
 <p align="center">
-  <img width="30%" src="https://raw.githubusercontent.com/dahliaOS/brand/master/dahliaOS/svg/logotypewhitetext.svg#gh-dark-mode-only"
-  
-</p>
-  
-<p align="center">
-  <img width="30%" src="https://github.com/dahliaOS/brand/blob/master/dahliaOS/svg/logotypeblacktext.svg#gh-light-mode-only"
-  
-</p>
-
-<p align="center">
-<a href="https://dahliaos.io">Website</a> ●
-<a href="https://discord.gg/7qVbJHR">Discord</a> ●
-<a href="https://github.com/dahliaos/releases/releases">Releases</a> ●
-<a href="https://paypal.me/officialdahliaos">Donate</a> ●
-<a href="https://github.com/dahliaos/documentation">Documentation</a>
+<a href="https://dahliaos.io">Website</a> •
+<a href="https://dahliaos.io/discord">Discord</a> •
+<a href="https://dahliaos.io/download">Releases</a> •
+<a href="https://dahliaos.io/donate">Donate</a> •
+<a href="https://docs.dahliaos.io">Documentation</a>
 
 # Media application
 
-- Media application made for dahliaOS
-- Written in Flutter
+- **Media application** made for dahliaOS
+- **Written** in Flutter
 
 ## Contribute
 
@@ -27,8 +17,8 @@ If you're interested in contributing to the project, please refer to [CONTRIBUTI
 ## License
 
 <p align="left">
-  <img width="40%" src="https://github.com/dahliaOS/brand/blob/main/assets/dahliaos/banner/monochrome_dark.svg#gh-dark-mode-only"/>
-  <img width="40%" src="https://github.com/dahliaOS/brand/blob/main/assets/dahliaos/banner/monochrome_light.svg#gh-light-mode-only"/>
+  <img width="30%" src="https://github.com/dahliaOS/brand/blob/main/dahliaOS/logotype/svg/logotype-dark.svg#gh-dark-mode-only"/>
+  <img width="30%" src="https://github.com/dahliaOS/brand/blob/main/dahliaOS/logotype/svg/logotype-light.svg#gh-light-mode-only"/>
 </p>
 
 Copyright @ 2019-2022 - The dahliaOS Authors - contact@dahliaos.io
